@@ -2,6 +2,7 @@
 The (Automatic) Youtube Uploader (For Timelapses)
 
 Welcome to the most automated, slightly magical way to upload your daily doses of breathtaking views to YouTube. 
+
 (I use my [Timelapse Creator script](https://github.com/inertiacreeping/Unifi-Timelapse/) to create a daily timelapse of my local views, then this script monitors the output folder for new timelapse videos, and uploads them.)
 
 ## What It Does 🚀
@@ -97,7 +98,7 @@ The script does its rounds every hour, checking for new timelapse videos and upl
 - Maintains a log of uploaded videos to avoid duplicates.
 
 ### Customizing Your Uploads 🎨
-- Feel free to tweak the upload_video function to include your preferred tags, categories, or even modify the video description. This script is just a starting point to automate your uploads. 
+- Feel free to tweak the upload_video function to include your preferred tags, categories, or even modify the video description.
 
 ### Acknowledgments 🙏
 Yeah, not gonna lie, this was all ChatGPT (I can't code to save my life). But hey, it works.
