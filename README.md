@@ -2,6 +2,7 @@
 The (Automatic) Youtube Uploader (For Timelapses)
 
 Welcome to the most automated, slightly magical way to upload your daily doses of breathtaking views to YouTube. 
+(I use my (Timelapse Creator script)[https://github.com/inertiacreeping/Unifi-Timelapse] to create a daily timelapse of my local views, then this script monitors the output folder for new timelapse videos, and uploads them.)
 
 ## What It Does 🚀
 
@@ -11,6 +12,56 @@ Which videos will it upload? This script checks the filename of the video files 
 ## Getting Started 🛠
 
 Before you embark on this journey, there are a few things you need to set up:
+
+### Google Cloud and YouTube API
+
+This guide will walk you through creating a project in Google Cloud, enabling the YouTube Data API, and setting up OAuth 2.0 credentials for your Napier Timelapse Uploader.
+
+#### Step 1: Create a Google Cloud Project
+
+1. **Sign in to Google Cloud Platform**
+   - Go to the [Google Cloud Console](https://console.cloud.google.com/) and sign in with your Google account. Create an account if you don't have one, obviously.
+
+2. **Create a New Project**
+   - Click on the project dropdown near the top of the page.
+   - Click the "New Project" button.
+   - Enter a project name and select a billing account if prompted.
+   - Click "Create".
+
+#### Step 2: Enable the YouTube Data API v3
+
+1. **Search for the YouTube Data API v3**
+   - Use the search bar to find "YouTube Data API v3".
+2. **Enable the API**
+   - Click on the YouTube Data API v3 and press "Enable".
+
+#### Step 3: Create Credentials
+
+1. **Access the Credentials Page**
+   - Once the YouTube API has been enabled, click on "Manage"
+   - Once you're reidrected to the API metrics page, click on "Create Credentials" blue button in the top right.
+
+2. **Configure the OAuth Consent Screen**
+   - Select the user data type 
+   - Fill in the required fields (app name, user support email, developer contact information).
+   - Save and continue, add scopes if necessary (I dunno, select all scopes).
+   - Select "Desktop app" as the application type.
+   - Name your OAuth client and click "Create".
+
+4. **Download the JSON File**
+   - Find the newly created credentials and click the download button to get your `YOUR_CLIENT_SECRET_FILE.json`.
+
+## Step 4: Install Required Python Packages
+
+Ensure you have the necessary Python packages:
+
+```bash
+pip install --upgrade google-api-python-client google-auth-oauthlib
+
+
+### Youtube API Services - Audit and Quota Extension Form
+
+You'll need to fill out this (annoying form)[https://support.google.com/youtube/contact/yt_api_form?hl=en] for your channel, so that the videos aren't locked to private (to combat spam). Takes 2-5 days for Youtube to approve your app.
 
 ### Prerequisites
 
