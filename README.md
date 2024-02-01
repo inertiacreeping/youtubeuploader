@@ -2,7 +2,7 @@
 The (Automatic) Youtube Uploader (For Timelapses)
 
 Welcome to the most automated, slightly magical way to upload your daily doses of breathtaking views to YouTube. 
-(I use my (Timelapse Creator script)[https://github.com/inertiacreeping/Unifi-Timelapse] to create a daily timelapse of my local views, then this script monitors the output folder for new timelapse videos, and uploads them.)
+(I use my (Timelapse Creator script)[https://github.com/inertiacreeping/Unifi-Timelapse/] to create a daily timelapse of my local views, then this script monitors the output folder for new timelapse videos, and uploads them.)
 
 ## What It Does 🚀
 
