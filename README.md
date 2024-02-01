@@ -16,7 +16,7 @@ Before you embark on this journey, there are a few things you need to set up:
 
 ### Google Cloud and YouTube API
 
-This guide will walk you through creating a project in Google Cloud, enabling the YouTube Data API, and setting up OAuth 2.0 credentials for your Napier Timelapse Uploader.
+This guide will walk you through creating a project in Google Cloud, enabling the YouTube Data API, and setting up OAuth 2.0 credentials.
 
 #### Step 1: Create a Google Cloud Project
 
@@ -63,6 +63,7 @@ pip install --upgrade google-api-python-client google-auth-oauthlib
 ### Youtube API Services - Audit and Quota Extension Form
 
 You'll need to fill out this (annoying form)[https://support.google.com/youtube/contact/yt_api_form?hl=en] for your channel, so that the videos aren't locked to private (to combat spam). Takes 2-5 days for Youtube to approve your app.
+If you don't fill out this form, Youtube will lock and private your videos, with no recourse/appeal possible.
 
 ### Prerequisites
 
