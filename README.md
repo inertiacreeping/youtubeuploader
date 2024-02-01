@@ -23,26 +23,26 @@ This guide will walk you through creating a project in Google Cloud, enabling th
    - Go to the [Google Cloud Console](https://console.cloud.google.com/) and sign in with your Google account. Create an account if you don't have one, obviously.
 
 2. **Create a New Project**
-   - Click on the project dropdown near the top of the page.
-   - Click the "New Project" button.
+   - Click on the project dropdown near the top left of the page.
+   - Click the "New Project" text in the top right of the new popup.
    - Enter a project name and select a billing account if prompted.
    - Click "Create".
 
 #### Step 2: Enable the YouTube Data API v3
 
 1. **Search for the YouTube Data API v3**
-   - Use the search bar to find "YouTube Data API v3".
+   - Use the top search bar to find "YouTube Data API v3".
 2. **Enable the API**
    - Click on the YouTube Data API v3 and press "Enable".
 
 #### Step 3: Create Credentials
 
 1. **Access the Credentials Page**
-   - Once the YouTube API has been enabled, click on "Manage"
-   - Once you're reidrected to the API metrics page, click on "Create Credentials" blue button in the top right.
+   - Once the YouTube API has been enabled, click on the blue "Manage" button.
+   - Once you're redirected to the API metrics page, click on "Create Credentials" blue button in the top right.
 
 2. **Configure the OAuth Consent Screen**
-   - Select the user data type 
+   - Select the **user** data type 
    - Fill in the required fields (app name, user support email, developer contact information).
    - Save and continue, add scopes if necessary (I dunno, select all scopes).
    - Select "Desktop app" as the application type.
@@ -72,14 +72,14 @@ You'll need to fill out this (annoying form)[https://support.google.com/youtube/
 pip install --upgrade google-api-python-client google-auth-oauthlib
 ```
 
-- A Google Cloud project with the YouTube Data API v3 enabled.
+- A Google Cloud project with the YouTube Data API v3 enabled (you should have done this previously)
 - OAuth 2.0 credentials for a Desktop app downloaded as YOUR_CLIENT_SECRET_FILE.json.
 
 ### Installation
 
 1. Clone this repository to your local machine or download the script directly.
-2. Replace YOUR_CLIENT_SECRET_FILE.json with the path to your downloaded OAuth 2.0 credentials file.
-3. Update the ROOT_VIDEO_DIRECTORY in the script to point to your timelapse videos directory.
+2. Replace YOUR_CLIENT_SECRET_FILE.json with the path to your downloaded OAuth 2.0 credentials file (or just put your secrets file in the same folder as the script)
+3. Update the ROOT_VIDEO_DIRECTORY in the script to point to your timelapse videos directory (by default it's C:\Timelapse\snapshots)
 
 ### Usage
 Simply run the script with Python and let the magic happen:
@@ -88,7 +88,7 @@ Simply run the script with Python and let the magic happen:
 python youtube_upload.py
 ```
 
-The script does its rounds every hour, checking for new timelapse videos and uploading them with the correct yesterday date in the title. It's like a time machine, but for YouTube uploads!
+The script does its rounds every hour, checking for new timelapse videos and uploading them with the correct yesterday date in the title.
 
 ### Features ✨
 - Automatically uploads timelapse videos to YouTube.
@@ -97,7 +97,7 @@ The script does its rounds every hour, checking for new timelapse videos and upl
 - Maintains a log of uploaded videos to avoid duplicates.
 
 ### Customizing Your Uploads 🎨
-- Feel free to tweak the upload_video function to include your preferred tags, categories, or even modify the video description. This script is just a starting point to automate your uploads. The sky (or should we say, the sunset?) is the limit!
+- Feel free to tweak the upload_video function to include your preferred tags, categories, or even modify the video description. This script is just a starting point to automate your uploads. 
 
 ### Acknowledgments 🙏
 Yeah, not gonna lie, this was all ChatGPT (I can't code to save my life). But hey, it works.
