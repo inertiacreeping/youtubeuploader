@@ -53,6 +53,7 @@ This guide will walk you through creating a project in Google Cloud, enabling th
 
 4. **Download the JSON File**
    - Find the newly created credentials and click the download button to get your `YOUR_CLIENT_SECRET_FILE.json`.
+   - Note: This file will have a different name, usually a long complex string of characters. I highly recommend just renaming it with the filename above and dropping it in the same folder as your script.
 
 ## Step 4: Install Required Python Packages
 
@@ -93,6 +94,8 @@ python youtube_upload.py
 ```
 
 The script does its rounds every hour, checking for new timelapse videos and uploading them with the correct yesterday date in the title.
+The first time you run the script, it'll open a browser window and prompt you to log into a Youtube account.
+Once logged in, the script will generate a token.pickle file with your credentials saved. Future script runs won't require a re-login.
 
 ### Features ✨
 - Automatically uploads timelapse videos to YouTube.
