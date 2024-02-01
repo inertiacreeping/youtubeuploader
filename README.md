@@ -19,6 +19,7 @@ Before you embark on this journey, there are a few things you need to set up:
 
 ```bash
 pip install --upgrade google-api-python-client google-auth-oauthlib
+```
 
 - A Google Cloud project with the YouTube Data API v3 enabled.
 - OAuth 2.0 credentials for a Desktop app downloaded as YOUR_CLIENT_SECRET_FILE.json.
@@ -34,6 +35,7 @@ Simply run the script with Python and let the magic happen:
 
 ```bash
 python youtube_upload.py
+```
 
 The script does its rounds every hour, checking for new timelapse videos and uploading them with the correct yesterday date in the title. It's like a time machine, but for YouTube uploads!
 
